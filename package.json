@@ -1,0 +1,56 @@
+{
+  "name": "simple-piskel-clone",
+  "version": "1.0.0",
+  "description": "simple animation player",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint main.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/margo24-RS2019Q3.git"
+  },
+  "keywords": [
+    "piskel",
+    "animation",
+    "player",
+    "draw",
+    "canvas"
+  ],
+  "author": "Margarita Lebedevich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/margo24-RS2019Q3/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/margo24-RS2019Q3#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-cli": "^6.26.0",
+    "canvas": "^2.6.1",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "fibers": "^4.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "sass": "^1.24.4",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {}
+}

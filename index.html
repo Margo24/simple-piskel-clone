@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <title>Simple piskel clone</title>
+</head>
+<body>
+<div class="wrapper">
+    <section class="header bg-dark text-white">
+        <h1>Piskel clone</h1>
+    </section>
+    <section class="main row no-gutters">
+        <section class="tools col-1">
+            <div class="tool border border-primary active-tool"
+                 data-toggle="tooltip"
+                 data-placement="right"
+                 title="Pen tool">
+                <img src="icons/pencil.svg" alt="Pen">
+            </div>
+            <div class="tool border border-primary"
+                 data-toggle="tooltip"
+                 data-placement="right"
+                 title="Paint bucket tool">
+                <img src="icons/bucket.svg" alt="Fill bucket">
+            </div>
+            <div class="tool border border-primary"
+                 data-toggle="tooltip"
+                 data-placement="right"
+                 title="Eraser tool">
+                <img src="icons/eraser.svg" width="20" alt="Eraser">
+            </div>
+            <div class="tool border border-primary"
+                 data-toggle="tooltip"
+                 data-placement="right"
+                 title="Stroke tool">
+                <img src="icons/resize.svg" width="20" alt="Stroke">
+            </div>
+            <div class="tool border border-primary"
+                 data-toggle="tooltip"
+                 data-placement="right"
+                 title="Primary color">
+                <input type="color" id="primary-color" name="primary-color" value="#000000">
+            </div>
+            <div class="tool border border-primary"
+                 data-toggle="tooltip"
+                 data-placement="right"
+                 title="Secondary color">
+                <input type="color" id="secondary-color" name="secondary-color" value="#ffffff">
+            </div>
+            <div class="tool border border-primary"
+                 data-toggle="tooltip"
+                 data-placement="right"
+                 title="Pen unit sizes">
+                <ul class="list-group">
+                    <li class="list-group-item active">1 px</li>
+                    <li class="list-group-item">2 px</li>
+                    <li class="list-group-item">3 px</li>
+                    <li class="list-group-item">4 px</li>
+                </ul>
+            </div>
+        </section>
+        <section class="frames col-2">
+            <ul class="frames__list">
+                <li class="frame__item frame--active">
+                    <canvas height="150" width="150">Обновите браузер</canvas>
+                    <div class="button frame__number">1</div>
+                    <div class="button frame__duplicate">
+                        <img src="frames/frame-icons/duplicate.svg"
+                             width="25"
+                             alt="Duplicate icon">
+                    </div>
+                    <div class="button frame__delete">
+                        <img src="frames/frame-icons/delete.svg"
+                             width="25"
+                             alt="Delete icon">
+                    </div>
+                    <div class="button frame__move">
+                        <img src="frames/frame-icons/move.svg"
+                             width="25"
+                             alt="Delete icon">
+                    </div>
+                </li>
+            </ul>
+            <div class="frames__pointer">
+                <span class="frames__plus">+</span>
+                <span>Add new frame</span>
+            </div>
+        </section>
+        <section class="canvas col-7">
+            <label for="canvas-size">Resize canvas</label>
+            <select class="form-control" id="canvas-size">
+                <option>Size 32x32</option>
+                <option>Size 64x64</option>
+                <option>Size 128x128</option>
+            </select>
+            <canvas height='512' width='512' id='canvas'>Обновите браузер</canvas>
+        </section>
+        <section class="animation col-2">
+            <canvas height='150' width='150' id="animation">Обновите браузер</canvas>
+        </section>
+    </section>
+</div>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+<script src="main.js"></script>
+</body>
+</html>
