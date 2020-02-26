@@ -1,4 +1,5 @@
 #Simple piskel clone task
+
 A simplified clone of the [Piskel application](https://www.piskelapp.com/), a web-based tool for Spriting and Pixel art.
 Bootstrap is used, including bootstrap grid.
 
